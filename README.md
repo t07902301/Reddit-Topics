@@ -3,7 +3,7 @@
 
 Welcome to the **Reddit Data Analysis Project**, where we harness the power of **Apache Spark** for big data processing and transform Reddit posts into meaningful insights using **word clouds**. 🌟  
 
-![Word Cloud Example](content\word_cloud_sample.png)  
+![Word Cloud Example](content/word_cloud_sample.png)  
 *Visualizing trends and hot topics from Reddit discussions.*
 
 ---
