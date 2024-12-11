@@ -4,7 +4,7 @@
 Welcome to the **Reddit Data Analysis Project**, where we harness the power of **Apache Spark** for big data processing and transform Reddit posts into meaningful insights using **word clouds**. 🌟  
 
 ![Word Cloud Example](content/word_cloud_sample.png)  
-*Visualizing trends and hot topics from Reddit discussions.*
+*Visualizing trends and hot topics from a Subreddit discussions.*
 
 ---
 
@@ -19,7 +19,7 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 
 ## ✨ **Features**
 - 🚀 **High-Performance Processing**: Apache Spark ensures scalability for analyzing millions of comments.  
-- 🧹 **Data Cleaning**: Removes noise, stop words, and irrelevant content for meaningful analysis.  
+- 🧹 **Data Cleaning**: Removes noise, stop words, and keep nouns for meaningful analysis.  
 - 🎨 **Interactive Word Clouds**: Visualize key trends and hot topics in vibrant, dynamic word clouds.  
 <!-- - 🔄 **Automation**: Scheduled workflows using **Airflow** for regular updates.   -->
 
@@ -34,7 +34,6 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 <!-- - **Deployment**: Docker, AWS (optional for scalability)   -->
 
 ---
-<!-- 
 ## 📂 **Project Structure**
 
 ```plaintext
@@ -55,26 +54,35 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 
 ## 🚀 **Getting Started**
 
-### 1️⃣ Prerequisites
-Make sure you have the following installed:
-- Python 3.8+
-- Apache Spark
-- Apache Airflow
-- Docker (optional)
-
-### 2️⃣ Installation
+### 1️⃣ Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/reddit-spark-wordcloud.git
-   cd reddit-spark-wordcloud
+   git clone git@github.com:t07902301/Reddit-Topics.git
+   cd Reddit-Topics
    ```
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+3. Install Spark
+   3. Install Spark:
+      Follow the instructions on the [Apache Spark Installation Guidance](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/05-batch#52-installation) to download and install Spark.
 
-### 3️⃣ Set Up Reddit API
-- Get your API keys from [Reddit's API](https://www.reddit.com/dev/api/).  
+### 2️⃣ Run the Project
+1. execute [run.sh](run.sh) 
+
+   To analyze word freq of 100 most recent posts in *r/travel*, use this example command. 
+
+   ```bash
+   ./run.sh https://www.reddit.com/r/travel.json?limit=100 content/test.png
+   ```
+
+   Use *run.sh -h* for more info. 
+
+2. check the word freq analysis result on the [destination path](content/test.png). 
+
+<!-- ### 3️⃣ Set Up Reddit API -->
+<!-- - Get your API keys from [Reddit's API](https://www.reddit.com/dev/api/).  
 - Add your credentials to a `.env` file:
   ```plaintext
   CLIENT_ID=your-client-id
@@ -111,7 +119,7 @@ Here’s an example of what you can achieve with this project:
 - Support additional data sources like Twitter or YouTube comments.  
 - Deploy a real-time dashboard using **Streamlit** or **Flask**.  
 
---- -->
+---
 
 ## 🤝 **Contributing**
 We welcome contributions! Feel free to:
@@ -122,7 +130,7 @@ We welcome contributions! Feel free to:
    ```
 3. Submit a pull request.
 
----
+--- -->
 
 ## 📄 **License**
 This project is licensed under the [MIT License](LICENSE).
@@ -133,7 +141,7 @@ This project is licensed under the [MIT License](LICENSE).
 - [Reddit API](https://www.reddit.com/dev/api/) for providing data.  
 - [Apache Spark](https://spark.apache.org/) for its powerful big data processing.  
 - [WordCloud](https://github.com/amueller/word_cloud) library for stunning visualizations.  
-
+- [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) for detailed intructions on the set-up and the use of Spark. 
 ---
 
 Let’s uncover the trends in Reddit conversations! 🚀  
