@@ -23,7 +23,6 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 - 🎨 **Interactive Word Clouds**: Visualize key trends and hot topics in vibrant, dynamic word clouds.  
 <!-- - 🔄 **Automation**: Scheduled workflows using **Airflow** for regular updates.   -->
 
----
 
 ## 🔧 **Tech Stack**
 - **Big Data Framework**: Apache Spark  
@@ -32,7 +31,7 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 <!-- - **Task Scheduling**: Apache Airflow   -->
 <!-- - **Data Sources**: Reddit API   -->
 <!-- - **Deployment**: Docker, AWS (optional for scalability)   -->
-
+<!-- 
 ---
 ## 📂 **Project Structure**
 
@@ -50,7 +49,7 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
 └── requirements.txt       # Python dependencies
 ```
 
----
+--- -->
 
 ## 🚀 **Getting Started**
 
@@ -65,21 +64,25 @@ Reddit is a goldmine of user-generated content across thousands of communities. 
    pip install -r requirements.txt
    ```
 3. Install Spark
-   3. Install Spark:
-      Follow the instructions on the [Apache Spark Installation Guidance](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/05-batch#52-installation) to download and install Spark.
+
+   Follow the instructions on the [Apache Spark Installation Guidance](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/05-batch#52-installation) to download and install Spark.
 
 ### 2️⃣ Run the Project
-1. execute [run.sh](run.sh) 
+1. Execute [run.sh](run.sh) 
 
-   To analyze word freq of 100 most recent posts in *r/travel*, use this example command. 
+   Template to use this shell script 
 
    ```bash
-   ./run.sh https://www.reddit.com/r/travel.json?limit=100 content/test.png
+   ./run.sh https://www.reddit.com/r/<subreddit_name>.json?limit=<number_of_posts> <result_desination>
+   ```
+   For example, to analyze word freq of 100 most recent posts in *r/travel* and save the result to *content/test.png*, we should replace *subreddit_name* to *travel*:  
+   ```bash
+   ./run.sh https://www.reddit.com/r/travel.json?limit=100 
    ```
 
-   Use *run.sh -h* for more info. 
+   Use **run.sh -h** for more info. 
 
-2. check the word freq analysis result on the [destination path](content/test.png). 
+2. Check the word freq analysis result on the destination path
 
 <!-- ### 3️⃣ Set Up Reddit API -->
 <!-- - Get your API keys from [Reddit's API](https://www.reddit.com/dev/api/).  
@@ -132,10 +135,10 @@ We welcome contributions! Feel free to:
 
 --- -->
 
-## 📄 **License**
+<!-- ## 📄 **License**
 This project is licensed under the [MIT License](LICENSE).
 
----
+--- -->
 
 ## ❤️ **Acknowledgments**
 - [Reddit API](https://www.reddit.com/dev/api/) for providing data.  
